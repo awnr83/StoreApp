@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dialog_opciones">
+        <item>@string/dialog_opcion_modificar</item>
+        <item>@string/dialog_opcion_eliminar</item>
+        <item>@string/dialog_opcion_llamar</item>
+        <item>@string/dialog_opcion_web</item>
+    </string-array>
+</resources>

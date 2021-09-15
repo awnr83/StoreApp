@@ -1,0 +1,38 @@
+<resources>
+<!--F Tienda-->
+    <string name="app_name">StoreApp</string>
+
+<!--F Detalle-->
+    <string name="fd_nombre">Ingrese el nombre de la tienda</string>
+    <string name="fd_helper">Requerido</string>
+    <string name="fd_telefono">Telefono</string>
+    <string name="fd_sitio_web">Sitio Web</string>
+    <string name="fd_url_photo">url de la imagen de portada</string>
+    <string name="fd_btn_guardar">Guardar</string>
+
+<!--Content Desc-->
+    <string name="cd_agregar_tienda">Agregar un tienda</string>
+    <string name="cd_imagen">Imagen de portada</string>
+
+<!--Menu-->
+    <string name="mnu_guardar">Guardar</string>
+
+<!--Dialog-->
+    <string name="dialog_title">Elija una opción:</string>
+    <string name="dialog_opcion_modificar">Modificar</string>
+    <string name="dialog_opcion_eliminar">Eliminar</string>
+    <string name="dialog_opcion_llamar">Llamar</string>
+    <string name="dialog_opcion_web">Ir al sitio Web</string>
+    <!--Dialog Eliminar-->
+    <string name="dialog_title_eliminar">Desea eliminar la tienda?</string>
+    <string name="dialog_eliminar_si">Eliminar</string>
+    <string name="dialog_eliminar_no">No</string>
+    <!--Dialog Intent-->
+    <string name="msg_no_telefono">No tiene un numero de telefono cargado</string>
+    <string name="msg_no_web">No tiene un sitio web cargado</string>
+    <string name="msg_no_intent">No se pude realizar la opcion solicitada</string>
+
+<!--accionmsg -->
+    <string name="msg_datos">Complete los datos requeridos</string>
+    <string name="msg_guardado">Guardado correctamente</string>
+</resources>

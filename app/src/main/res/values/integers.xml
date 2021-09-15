@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="fd_max_letras">50</integer>
+    <integer name="fd_max_telefono">16</integer>
+    <integer name="fd_max_lineas">4</integer>
+    <integer name="fd_min_letras">1</integer>
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".detalle.DetalleFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.moappdev.solutions.storeapp.detalle.DetalleViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dimen_minimo">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fd_nombre"
+            android:layout_margin="@dimen/dimen_minimo"
+            app:errorEnabled="true"
+            app:counterMaxLength="@integer/fd_max_letras"
+            app:counterEnabled="true"
+            app:helperText="@string/fd_helper"
+            app:startIconDrawable="@drawable/ic_store"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="@integer/fd_max_letras"
+                android:inputType="textCapWords"
+                android:text="@={viewModel.store.nombre}" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fd_telefono"
+            android:layout_margin="@dimen/dimen_minimo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_phone">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="@integer/fd_max_telefono"
+                android:inputType="number"
+                android:text="@={viewModel.store.telefono}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_minimo"
+            android:hint="@string/fd_sitio_web"
+            app:startIconDrawable="@drawable/ic_web"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWeb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:maxLines="@integer/fd_max_lineas"
+                android:minLines="@integer/fd_min_letras"
+                android:inputType="text"
+                android:text="@={viewModel.store.sitioWeb}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPhoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/dimen_minimo"
+                android:hint="@string/fd_url_photo"
+                app:helperText="@string/fd_helper"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/ic_web"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="@integer/fd_min_letras"
+                    android:maxLines="@integer/fd_max_lineas"
+                    android:textColor="@color/blue"
+                    android:text="@={viewModel.store.imgWeb}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="@dimen/fd_size_img"
+                android:layout_height="@dimen/fd_size_img"
+                android:layout_margin="@dimen/dimen_default" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/tiendaFragment">
+
+    <fragment
+        android:id="@+id/tiendaFragment"
+        android:name="com.moappdev.solutions.storeapp.tiendas.TiendaFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_tienda">
+        <action
+            android:id="@+id/action_tiendaFragment_to_detalleFragment2"
+            app:destination="@id/detalleFragment"
+            app:popUpTo="@id/detalleFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.moappdev.solutions.storeapp.detalle.DetalleFragment"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle" >
+        <argument
+            android:name="tienda"
+            app:argType="com.moappdev.solutions.storeapp.database.TiendaEntity" />
+        <action
+            android:id="@+id/action_detalleFragment_to_tiendaFragment"
+            app:destination="@id/tiendaFragment" />
+    </fragment>
+</navigation>

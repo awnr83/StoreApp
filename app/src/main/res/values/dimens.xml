@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_minimo">8dp</dimen>
+    <dimen name="dimen_cv_height">200dp</dimen>
+    <dimen name="dimen_default">16dp</dimen>
+    <dimen name="dimen_maximo">24dp</dimen>
+    <dimen name="fd_size_img">88dp</dimen>
+
+</resources>
